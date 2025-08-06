@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumpleaños Sharon 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff8fb1, #ffe0f7);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px #d84797;
+      animation: latidos 2s infinite;
+    }
+
+    @keyframes latidos {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .video-redondo {
+      margin: 20px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      width: 360px;
+      height: 215px;
+    }
+
+    .code-input {
+      margin-top: 20px;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: #ff66a3;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff3380;
+    }
+
+    #carta {
+      display: none;
+      margin: 30px auto;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      color: white;
+      text-align: justify;
+      line-height: 1.6;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      transition: all 1s ease;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    #carta.mostrar {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .carrusel-container {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .carrusel-container h2 {
+      margin-bottom: 15px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .carrusel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 15px;
+      padding-bottom: 10px;
+    }
+
+    .slide {
+      flex: none;
+      scroll-snap-align: center;
+      width: 280px;
+      height: 380px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+    .slide:hover {
+      transform: scale(1.05);
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Corazones animados */
+    .heart {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.6;
+      z-index: -1;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -7.5px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -7.5px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+
+
+
+.carrusel-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  color: #fff;
+}
+
+.carrusel {
+  display: flex;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  animation: slideAnim 35s infinite ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+@keyframes slideAnim {
+  0% { transform: translateX(0%); }
+  14.28% { transform: translateX(0%); }
+  28.56% { transform: translateX(-100%); }
+  42.84% { transform: translateX(-200%); }
+  57.12% { transform: translateX(-300%); }
+  71.4% { transform: translateX(-400%); }
+  85.68% { transform: translateX(-500%); }
+  100% { transform: translateX(-600%); }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Feliz Cumpleaños Sharon 🎉</h1>
+
+  <div class="video-redondo">
+    <iframe width="360" height="215" src="https://www.youtube.com/embed/0D61_tSM3ww?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=0D61_tSM3ww" title="Feliz Cumpleaños Sharon" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="code-input">
+    <p>💌 Ingresa tu código secreto para ver tu carta:</p>
+    <input type="password" id="codigo" placeholder="Código secreto..." />
+    <button onclick="verCarta()">Ver Carta</button>
+  </div>
+
+  <div id="carta">
+    <h2>Mi querida Sharon ❤️</h2>
+    <p>
+      En este día tan especial quiero recordarte lo valiosa que eres para mí. Tu sonrisa ilumina mis días como ningún otro ser lo haría jamás. Gracias por estar en mi vida, por compartir tus momentos y por darme razones para seguir soñando.
+    </p>
+    <p>
+      Que este nuevo año te traiga alegría, salud, metas cumplidas y mucho amor... ¡y más momentos a tu lado!
+    </p>
+    <p>Te amo con todo mi corazón 💖</p>
+    <p>Tu ingeniero LOBOTEK que Te AMA 💻🐺</p>
+  </div>
+
+<div class="carrusel-container">
+  <h2>Nuestros Momentos 💑</h2>
+  <div class="carrusel">
+    <div class="slide"><img src="1sj.jpg" alt="Foto 1"></div>
+    <div class="slide"><img src="2sj.jpg" alt="Foto 2"></div>
+    <div class="slide"><img src="3sj.jpg" alt="Foto 3"></div>
+    <div class="slide"><img src="4sj.jpg" alt="Foto 4"></div>
+    <div class="slide"><img src="5sj.jpg" alt="Foto 5"></div>
+    <div class="slide"><img src="6sj.jpg" alt="Foto 6"></div>
+    <div class="slide"><img src="7sj.jpg" alt="Foto 7"></div>
+     <div class="slide"><img src="8sj.jpg" alt="Foto 1"></div>
+    <div class="slide"><img src="9sj.jpg" alt="Foto 2"></div>
+    <div class="slide"><img src="10sj.jpg" alt="Foto 3"></div>
+    <div class="slide"><img src="11sj.jpg" alt="Foto 4"></div>
+    <div class="slide"><img src="12sj.jpg" alt="Foto 5"></div>
+    <div class="slide"><img src="13sj.jpg" alt="Foto 6"></div>
+    <div class="slide"><img src="14sj.jpg" alt="Foto 7"></div>
+  </div>
+</div>
+
+
+  <!-- Música de fondo opcional -->
+  <!--
+  <audio autoplay loop>
+    <source src="tu_musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+  -->
+
+  <!-- Corazones animados -->
+  <script>
+    function crearCorazones() {
+      for (let i = 0; i < 20; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = `${Math.random() * 100}vw`;
+        heart.style.animationDuration = `${4 + Math.random() * 6}s`;
+        document.body.appendChild(heart);
+      }
+    }
+
+    crearCorazones();
+
+    function verCarta() {
+      const codigo = document.getElementById('codigo').value.toLowerCase().trim();
+      if (codigo === "sharon") {
+        const carta = document.getElementById('carta');
+        carta.style.display = 'block';
+        setTimeout(() => {
+          carta.classList.add('mostrar');
+        }, 10);
+      } else {
+        alert("Código incorrecto 😢");
+      }
+    }
+  </script>
+
+</body>
+</html>
